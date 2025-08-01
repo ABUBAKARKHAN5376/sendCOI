@@ -49,7 +49,7 @@ export default function Navbar() {
             <nav className="container mx-auto px-10 max-[475px]:px-4 max-[475px]:py-4 py-6 flex items-center justify-between relative">
                 {/* Logo */}
                 <div>
-                    <img className='h-10 max-2xl:h-9 max-lg:h-7'  loading="lazy" src="/images/logo.svg" alt="Logo" />
+                    <img className='h-10 max-2xl:h-9 max-lg:h-7' loading="lazy" src="/images/logo.svg" alt="Logo" />
                 </div>
 
                 {/* Desktop Menu */}
@@ -75,7 +75,9 @@ export default function Navbar() {
                                 )}
                             </li>
                         ) : (
-                            <li key={item.label} className="cursor-pointer">{item.label}</li>
+                            <li key={item.label} className="cursor-pointer">
+                                <Link href="/" >{item.label}</Link>
+                            </li>
                         )
                     )}
                 </ul>
@@ -125,9 +127,9 @@ export default function Navbar() {
                                 </li>
                             ) : (
                                 <li key={item.label}>
-                                    <a href="#" className="block">
+                                    <Link href="/" className="block">
                                         {item.label}
-                                    </a>
+                                    </Link>
                                 </li>
                             )
                         )}
