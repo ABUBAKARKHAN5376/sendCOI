@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
       </head>
 
-      <body>
+      <body className="overflow-hidden text-[#11a1a1a] max-w-full">
         {/* <AOSWrapper /> */}
         <Header />
         <main>{children}</main>

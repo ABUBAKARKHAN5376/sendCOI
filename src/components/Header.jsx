@@ -29,12 +29,19 @@ export default function Navbar() {
         return () => document.removeEventListener('click', handleClickOutside);
     }, []);
 
-    useEffect(() => {
-        document.body.style.overflow = isSidebarOpen ? 'hidden' : '';
-        return () => {
-            document.body.style.overflow = '';
-        };
-    }, [isSidebarOpen]);
+   useEffect(() => {
+    const html = document.documentElement; // this gets the <html> tag
+    if (isSidebarOpen) {
+        html.classList.add('overflow-hidden');
+    } else {
+        html.classList.remove('overflow-hidden');
+    }
+
+    return () => {
+        html.classList.remove('overflow-hidden');
+    };
+}, [isSidebarOpen]);
+
 
     const toggleDropdown = (menu) => {
         setOpenDropdown((prev) => (prev === menu ? null : menu));
