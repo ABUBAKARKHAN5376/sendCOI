@@ -60,7 +60,7 @@ export default function Navbar() {
                                 <button
                                     onClick={() => toggleDropdown(item.id)}
                                     data-dropdown-button
-                                    className="flex items-center gap-1"
+                                    className="flex items-center gap-1 cursor-pointer"
                                 >
                                     {item.label} <img loading="lazy" className='h-6 max-2xl:h-5' src='/images/dd_arrow.svg' alt="" />
                                 </button>
