@@ -58,7 +58,7 @@ export default function Navbar() {
                         item.id ? (
                             <li key={item.id} className="relative cursor-pointer">
                                 <button
-                                    onClick={() => toggleDropdown(item.id)}
+                                    onMouseOver={() => toggleDropdown(item.id)}
                                     data-dropdown-button
                                     className="flex items-center gap-1 cursor-pointer"
                                 >
