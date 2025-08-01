@@ -8,7 +8,7 @@ function Footer() {
         <div className='container mx-auto px-10 max-[475px]:px-4'>
             <div className='flex justify-between max-lg:flex-col items-end pb-10 border-b border-[rgba(0,0,0,0.1)]'>
                 <div className='max-lg:w-full'>
-                    <img className='max-2xl:h-9' src="/images/logo.svg" alt="" />
+                    <img  loading="lazy" className='max-2xl:h-9' src="/images/logo.svg" alt="logo" />
                     <p className='text-xl mt-10 w-96 max-2xl:mt-6 max-2xl:text-lg max-lg:w-[500px] max-sm:w-full'>SendCOI is a web service that provides commercial insurance agencies a self generated Certificate of Insurance to their commercial policy holders  anytime anywhere from a smart phone</p>
                     <div className='flex mt-12 gap-8 max-2xl:mt-8'>
                         <a href="" className='text-3xl max-2xl:text-2xl text-[#00B0F0] hover:text-[#009ed8] hover:scale-[1.1]'><FaXTwitter  /></a>                

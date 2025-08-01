@@ -49,7 +49,7 @@ export default function Navbar() {
             <nav className="container mx-auto px-10 max-[475px]:px-4 max-[475px]:py-4 py-6 flex items-center justify-between relative">
                 {/* Logo */}
                 <div>
-                    <img className='h-10 max-2xl:h-9 max-lg:h-7' src="/images/logo.svg" alt="Logo" />
+                    <img className='h-10 max-2xl:h-9 max-lg:h-7'  loading="lazy" src="/images/logo.svg" alt="Logo" />
                 </div>
 
                 {/* Desktop Menu */}
@@ -62,7 +62,7 @@ export default function Navbar() {
                                     data-dropdown-button
                                     className="flex items-center gap-1"
                                 >
-                                    {item.label} <img className='h-6 max-2xl:h-5' src='/images/dd_arrow.svg' alt="" />
+                                    {item.label} <img loading="lazy" className='h-6 max-2xl:h-5' src='/images/dd_arrow.svg' alt="" />
                                 </button>
                                 {openDropdown === item.id && (
                                     <div className="dropdown-menu absolute mt-2 w-48 bg-white border rounded shadow">

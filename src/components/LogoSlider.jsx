@@ -52,7 +52,7 @@ export default function LogoSlider() {
             <div ref={scrollRef} className="flex gap-24 max-2xl:gap-20 max-md:gap-10 w-max will-change-transform">
                 {/* Duplicate the logos array */}
                 {[...logos, ...logos].map((logo, index) => (
-                    <img className='h-16 max-2xl:h-12 ' src={logo} key={index} alt="" />
+                    <img className='h-16 max-2xl:h-12 ' loading="lazy" src={logo} key={index} alt="" />
                 ))}
             </div>
             <div className="absolute top-0 left-0 h-full w-60 bg-gradient-to-r from-white to-transparent  max-sm:w-20"></div>

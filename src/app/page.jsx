@@ -10,162 +10,94 @@ export default function Home() {
 
 
 
-
-      {/*//////////////////// HERO SECTION ///////////////// */}
-
-      <section data-aos="fade-in" className=" container mx-auto px-10 max-[475px]:px-4 flex items-center flex-col justify-center min-h-[82vh] text-center">
-        <h1 className="centra text-black font-centra text-7xl font-black leading-tight max-2xl:text-[55px] max-lg:text-[46px] max-md:text-[40px]  max-sm:text-[36px]"><span className="text-[#00B0F0]">SEND COI</span> MAKES <br />
-          PAPERWORK DISAPPEAR</h1>
-        <p className="mt-10 text-2xl max-2xl:text-xl max-2xl:mt-7 max-md:text-lg">Smart tools for proof of coverage. No phone calls. No delays.</p>
+      {/* HERO SECTION */}
+      <section data-aos="fade-in" className="container mx-auto px-10 max-[475px]:px-4 flex items-center flex-col justify-center min-h-[82vh] text-center">
+        <h1 className="centra text-black font-centra text-7xl font-black leading-tight max-2xl:text-[55px] max-lg:text-[46px] max-md:text-[40px]  max-sm:text-[36px]">
+          <span className="text-[#00B0F0]">SEND COI</span> MAKES <br />
+          PAPERWORK DISAPPEAR
+        </h1>
+        <p className="mt-10 text-2xl max-2xl:text-xl max-2xl:mt-7 max-md:text-lg">
+          Smart tools for proof of coverage. No phone calls. No delays.
+        </p>
         <div className="flex items-center gap-8 mt-10 max-sm:gap-4">
-          <Link href="/" className="btn-primary">Get Quote</Link>
-          <Link href="/" className="text-lg text-[#00B0F0] font-medium hover:text-[#009ed8] transition max-2xl:text-base max-md:text-[15px]">Request Your COI Instantly</Link>
+          <Link href="/" className="btn-primary" aria-label="Get insurance quote">Get Quote</Link>
+          <Link href="/" className="text-lg text-[#00B0F0] font-medium hover:text-[#009ed8] transition max-2xl:text-base max-md:text-[15px]">
+            Request Your COI Instantly
+          </Link>
         </div>
       </section>
 
-
-
-
-
-
-
-      {/*//////////////////// Coverage SECTION ///////////////// */}
-
+      {/* COVERAGE SECTION */}
       <section className="container px-10 max-[475px]:px-4 mx-auto mt-20">
-        <h3 className="font-bold text-4xl text-center mb-20 max-2xl:mb-16 max-2xl:text-3xl max-lg:text-[28px]">Get Started by Choosing Your Coverage:</h3>
+        <h2 className="font-bold text-4xl text-center mb-20 max-2xl:mb-16 max-2xl:text-3xl max-lg:text-[28px]">
+          Get Started by Choosing Your Coverage:
+        </h2>
         <div className="flex flex-wrap justify-center gap-7">
           <CoverageCard
-            icon={'/images/coverage_icon_1.svg'}
+            icon="/images/coverage_icon_1.svg"
             title="General Liability"
             desc="Protect your business from accidents, injuries, and legal claims."
           />
           <CoverageCard
-            icon={'/images/coverage_icon_2.svg'}
+            icon="/images/coverage_icon_2.svg"
             title="Workers Compensation"
             desc="Coverage that supports your team and your peace of mind."
             link="Get a Quote"
           />
           <CoverageCard
-            icon={'/images/coverage_icon_3.svg'}
+            icon="/images/coverage_icon_3.svg"
             title="Business Owner’s Policy"
             desc="Essential protection for your business, bundled and simplified."
           />
           <CoverageCard
-            icon={'/images/coverage_icon_4.svg'}
+            icon="/images/coverage_icon_4.svg"
             title="Professional Liability"
             desc="Safeguard your services from costly mistakes and client disputes."
           />
           <CoverageCard
-            icon={'/images/coverage_icon_5.svg'}
+            icon="/images/coverage_icon_5.svg"
             title="Other Coverages"
             desc="Customize your protection with specialized, add-on policies."
           />
         </div>
       </section>
 
-
-
-
-
-
-
-      {/*//////////////////// LogoSlider SECTION ///////////////// */}
-
+      {/* LOGO SLIDER */}
       <section className="relative w-full overflow-hidden mt-36">
         <LogoSlider />
       </section>
 
-
-
-
-
-
-
-      {/*//////////////////// WHY CHOOSE SECTION ///////////////// */}
-
+      {/* WHY CHOOSE SECTION */}
       <section className="container px-10 max-[475px]:px-4 mx-auto mt-60 max-2xl:mt-44 max-lg:mt-36">
-        <h1 className="heading centra">WHY CHOOSE <span className="text-[#00B0F0]">SEND COI</span></h1>
+        <h2 className="heading centra">WHY CHOOSE <span className="text-[#00B0F0]">SEND COI</span></h2>
         <div className="flex items-center justify-center max-lg:flex-col">
-          <div className="bg-[url(/images/choose_img.webp)] bg-center bg-cover w-1/2 h-[580px]  max-2xl:h-[500px] max-xl:h-[550px] max-lg:w-full max-lg:h-[370px] rounded-lg"></div>
+          <div
+            className="bg-[url(/images/choose_img.webp)] bg-center bg-cover w-1/2 h-[580px] max-2xl:h-[500px] max-xl:h-[550px] max-lg:w-full max-lg:h-[370px] rounded-lg"
+            role="img"
+            aria-label="People using sendCOI platform"
+          />
           <div className="w-1/2 pl-20 max-2xl:pl-14 max-xl:pl-10 max-lg:w-full max-lg:pl-0 max-lg:mt-10 max-md:mt-6">
-            <div data-aos="fade-right" className="py-8 border-b border-[#00000033] max-2xl:py-6 max-xl:py-5">
-              <b className="font-medium text-3xl max-2xl:text-[27px] max-xl:text-[24px] max-md:text-[23px] max-sm:text-[21px]">Instant & Self-Service</b>
-              <p className="mt-2 text-lg max-md:text-base">Access your COI digitally, 24/7. No phone calls, no policy agents</p>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="100" className="py-8 border-b border-[#00000033] max-2xl:py-6 max-xl:py-5">
-              <b className="font-medium text-3xl max-2xl:text-[27px] max-xl:text-[24px] max-md:text-[23px] max-sm:text-[21px]">Fully Customizable & ACORD-Compliant</b>
-              <p className="mt-2 text-lg">Tailor each certificate with endorsements like Additional Insured</p>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="200" className="py-8 border-b border-[#00000033] max-2xl:py-6 max-xl:py-5">
-              <b className="font-medium text-3xl max-2xl:text-[27px] max-xl:text-[24px] max-md:text-[23px] max-sm:text-[21px]">Trusted, Precise, Transparent</b>
-              <p className="mt-2 text-lg">Certificates include policyholder name, coverage limits and issuance</p>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="300" className="py-8 max-2xl:py-6 max-xl:py-5">
-              <b className="font-medium text-3xl max-2xl:text-[27px] max-xl:text-[24px] max-md:text-[23px] max-sm:text-[21px]">Unlimited & Always Current</b>
-              <p className="mt-2 text-lg">Download endless COIs for as long as your policy is active</p>
-            </div>
+            {[
+              { delay: 0, title: "Instant & Self-Service", desc: "Access your COI digitally, 24/7. No phone calls, no policy agents" },
+              { delay: 100, title: "Fully Customizable & ACORD-Compliant", desc: "Tailor each certificate with endorsements like Additional Insured" },
+              { delay: 200, title: "Trusted, Precise, Transparent", desc: "Certificates include policyholder name, coverage limits and issuance" },
+              { delay: 300, title: "Unlimited & Always Current", desc: "Download endless COIs for as long as your policy is active" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                data-aos="fade-right"
+                data-aos-delay={item.delay}
+                className={`py-8 ${index !== 3 ? "border-b border-[#00000033]" : ""} max-2xl:py-6 max-xl:py-5`}
+              >
+                <b className="font-medium text-3xl max-2xl:text-[27px] max-xl:text-[24px] max-md:text-[23px] max-sm:text-[21px]">
+                  {item.title}
+                </b>
+                <p className="mt-2 text-lg max-md:text-base">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-
-
-
-
-
-
-
-      {/*//////////////////// PROFESSION SECTION ///////////////// */}
-
-      <section className="container px-10 max-[475px]:px-4 mx-auto mt-60 max-xl:mt-44 max-lg:mt-36">
-        <h1 className="heading centra">SHOP BY PROFESSION</h1>
-        <div className="flex flex-wrap justify-center gap-7">
-          <Link data-aos="zoom-in" href="/" className="rounded-xl w-[31.7%] max-2xl:w-[30%] max-lg:w-[47%] max-sm:w-full group">
-            <div className="bg-[url(/images/profession_img_1.webp)] rounded-t-xl bg-center bg-no-repeat bg-cover h-[300px] max-2xl:h-[240px] max-xl:h-[200px]"></div>
-            <div className="flex justify-around rounded-b-xl py-9 max-2xl:py-6 bg-[#F5F5F5]">
-              <p className="text-2xl font-bold max-2xl:text-xl max-xl:text-lg">Entertainment Quote</p>
-              <img className="h-10 transition-transform duration-300 group-hover:translate-x-3 max-2xl:h-7" src="/images/arrow_right.svg" alt="" />
-            </div>
-          </Link>
-          <Link data-aos="zoom-in" href="/" className="rounded-xl w-[31.7%] max-2xl:w-[30%] max-lg:w-[47%] max-sm:w-full group">
-            <div className="bg-[url(/images/profession_img_2.webp)] rounded-t-xl bg-center bg-no-repeat bg-cover h-[300px] max-2xl:h-[240px] max-xl:h-[200px]"></div>
-            <div className="flex justify-around rounded-b-xl py-9 max-2xl:py-6 bg-[#F5F5F5]">
-              <p className="text-2xl font-bold max-2xl:text-xl max-xl:text-lg">Professionals Quote</p>
-              <img className="h-10 transition-transform duration-300 group-hover:translate-x-3 max-2xl:h-7" src="/images/arrow_right.svg" alt="" />
-            </div>
-          </Link>
-          <Link data-aos="zoom-in" href="/" className="rounded-xl w-[31.7%] max-2xl:w-[30%] max-lg:w-[47%] max-sm:w-full group">
-            <div className="bg-[url(/images/profession_img_3.webp)] rounded-t-xl bg-center bg-no-repeat bg-cover h-[300px] max-2xl:h-[240px] max-xl:h-[200px]"></div>
-            <div className="flex justify-around rounded-b-xl py-9 max-2xl:py-6 bg-[#F5F5F5]">
-              <p className="text-2xl font-bold max-2xl:text-xl max-xl:text-lg">Food & Beverage Quote</p>
-              <img className="h-10 transition-transform duration-300 group-hover:translate-x-3 max-2xl:h-7" src="/images/arrow_right.svg" alt="" />
-            </div>
-          </Link>
-          <Link data-aos="zoom-in" href="/" className="rounded-xl w-[31.7%] max-2xl:w-[30%] max-lg:w-[47%] max-sm:w-full group">
-            <div className="bg-[url(/images/profession_img_4.webp)] rounded-t-xl bg-center bg-no-repeat bg-cover h-[300px] max-2xl:h-[240px] max-xl:h-[200px]"></div>
-            <div className="flex justify-around rounded-b-xl py-9 max-2xl:py-6 bg-[#F5F5F5]">
-              <p className="text-2xl font-bold max-2xl:text-xl max-xl:text-lg">Entertainment Quote</p>
-              <img className="h-10 transition-transform duration-300 group-hover:translate-x-3 max-2xl:h-7" src="/images/arrow_right.svg" alt="" />
-            </div>
-          </Link>
-          <Link data-aos="zoom-in" href="/" className="rounded-xl w-[31.7%] max-2xl:w-[30%] max-lg:w-[47%] max-sm:w-full group">
-            <div className="bg-[url(/images/profession_img_5.webp)] rounded-t-xl bg-center bg-no-repeat bg-cover h-[300px] max-2xl:h-[240px] max-xl:h-[200px]"></div>
-            <div className="flex justify-around rounded-b-xl py-9 max-2xl:py-6 bg-[#F5F5F5]">
-              <p className="text-2xl font-bold max-2xl:text-xl max-xl:text-lg">Daycare Quote</p>
-              <img className="h-10 transition-transform duration-300 group-hover:translate-x-3 max-2xl:h-7" src="/images/arrow_right.svg" alt="" />
-            </div>
-          </Link>
-          <Link data-aos="zoom-in" href="/" className="rounded-xl w-[31.7%] max-2xl:w-[30%] max-lg:w-[47%] max-sm:w-full group">
-            <div className="bg-[url(/images/profession_img_6.webp)] rounded-t-xl bg-center bg-no-repeat bg-cover h-[300px] max-2xl:h-[240px] max-xl:h-[200px]"></div>
-            <div className="flex justify-around rounded-b-xl py-9 max-2xl:py-6 bg-[#F5F5F5]">
-              <p className="text-2xl font-bold max-2xl:text-xl max-xl:text-lg">Retail Quote</p>
-              <img className="h-10 transition-transform duration-300 group-hover:translate-x-3 max-2xl:h-7" src="/images/arrow_right.svg" alt="" />
-            </div>
-          </Link>
-        </div>
-        <Link href="/" className="block mx-auto btn-primary mt-14 w-fit">Find Your Business</Link>
-      </section>
-
-
 
 
 
@@ -301,7 +233,7 @@ export default function Home() {
 
       <section className="w-full min-h-[950px] max-lg:min-h-[90vh] bg-[url(/images/clouds_img.webp)] bg-center bg-cover mt-20 max-2xl:mt-0 ">
         <div className="container mx-auto px-10 max-[475px]:px-4 min-h-[950px]  flex flex-col justify-center items-center">
-          <h2 className="heading centra !mb-0 uppercase">Don’t lose <span className="text-[#00B0F0]">clients</span> or <span className="text-[#00B0F0]">delays</span> <br className=" max-sm:hidden"/>
+          <h2 className="heading centra !mb-0 uppercase">Don’t lose <span className="text-[#00B0F0]">clients</span> or <span className="text-[#00B0F0]">delays</span> <br className=" max-sm:hidden" />
             over missing COIs</h2>
           <p className="mt-12 text-2xl max-2xl:text-[22px] max-2xl:mt-7 max-lg:text-lg text-center max-xs:bg-red-500">Get your Certificate of Insurance now with SEND COI.</p>
           <Link href="/" className="btn-primary inline-block mt-12 !bg-white !text-[#00B0F0] hover:!bg-[#00B0F0] hover:!text-white">Request Your COI Instantly</Link>
