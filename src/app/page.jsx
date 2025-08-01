@@ -226,7 +226,7 @@ export default function Home() {
               <p className="text-lg w-[70%] mt-6 max-2xl:mt-2 max-xl:text-base">Fast account setup. Seamless dashboard access for current policyholders.</p>
             </div>
             <div className="bg-[url(/images/work_img_1.webp)] w-full h-[500px] max-2xl:h-[440px] max-xl:h-[360px] max-sm:h-[240px] rounded-lg bg-center bg-cover flex items-end justify-end p-10 mt-5 max-sm:mt-0">
-              <div className="w-28 h-28 rounded-full bg-[#00B0F0] flex items-center justify-center max-2xl:w-20 max-xl:h-15 max-xl:w-15 max-2xl:h-20 pt-4 max-2xl:pt-3">
+              <div data-aos="zoom-in" className="w-28 h-28 rounded-full bg-[#00B0F0] flex items-center justify-center max-2xl:w-20 max-xl:h-15 max-xl:w-15 max-2xl:h-20 pt-4 max-2xl:pt-3">
                 <p className="font-black text-white text-7xl centra max-2xl:text-5xl max-xl:text-4xl">1</p>
               </div>
             </div>
@@ -235,7 +235,7 @@ export default function Home() {
 
           <div className="w-[32%]  max-lg:w-[47%] max-sm:w-full max-sm:flex max-sm:flex-col">
             <div className="bg-[url(/images/work_img_2.webp)] w-full h-[500px] max-2xl:h-[440px] max-xl:h-[360px]  max-sm:h-[240px] rounded-lg bg-center bg-cover flex items-end justify-end p-10 ">
-              <div className="w-28 h-28 rounded-full bg-[#00B0F0] flex items-center justify-center max-2xl:w-20 max-xl:h-15 max-xl:w-15 max-2xl:h-20 pt-4 max-2xl:pt-3">
+              <div data-aos="zoom-in" className="w-28 h-28 rounded-full bg-[#00B0F0] flex items-center justify-center max-2xl:w-20 max-xl:h-15 max-xl:w-15 max-2xl:h-20 pt-4 max-2xl:pt-3">
                 <p className="font-black text-white text-7xl centra max-2xl:text-5xl max-xl:text-4xl">2</p>
               </div>
             </div>
@@ -252,7 +252,7 @@ export default function Home() {
               <p className="text-lg w-[70%] mt-6 max-2xl:mt-2 max-xl:text-base">Download your PDF or send via secure link. Share directly with stakeholders instantly.</p>
             </div>
             <div className="bg-[url(/images/work_img_3.webp)] w-full h-[500px] max-2xl:h-[440px]  max-xl:h-[360px] max-lg:h-48  max-sm:h-[240px] rounded-lg bg-center bg-cover flex items-end justify-end p-10 mt-5 max-lg:mt-0">
-              <div className="w-28 h-28 rounded-full bg-[#00B0F0] flex items-center justify-center max-2xl:w-20 max-xl:h-15 max-xl:w-15 max-2xl:h-20 pt-4 max-2xl:pt-3">
+              <div data-aos="zoom-in" className="w-28 h-28 rounded-full bg-[#00B0F0] flex items-center justify-center max-2xl:w-20 max-xl:h-15 max-xl:w-15 max-2xl:h-20 pt-4 max-2xl:pt-3">
                 <p className="font-black text-white text-7xl centra max-2xl:text-5xl max-xl:text-4xl">3</p>
               </div>
             </div>
