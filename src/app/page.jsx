@@ -1,7 +1,6 @@
 import CoverageCard from "@/components/CoverageCard";
 import LogoSlider from "@/components/LogoSlider";
 import TestimonialSlider from "@/components/TestimonialSlider";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -134,7 +133,7 @@ export default function Home() {
 
       <section className="mt-72 max-2xl:mt-48 max-xl:mt-44 max-lg:mt-36">
         <h2 className="container px-10 mx-auto heading centra">CUSTOMER SAYING</h2>
-        <div className="w-full mb-96">
+        <div className="w-full mb-96 max-sm:mb-36">
           <TestimonialSlider />
         </div>
       </section>
