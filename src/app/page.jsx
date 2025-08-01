@@ -1,30 +1,8 @@
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-
-// ✅ Dynamically import TestimonialSlider
-const TestimonialSlider = dynamic(
-  () => import('@/components/client/TestimonialSlider'),
-  {
-    loading: () => <div>Loading testimonials...</div>,
-  }
-);
-
-// ✅ Dynamically import LogoSlider
-const LogoSlider = dynamic(
-  () => import('@/components/client/LogoSlider'),
-  {
-    loading: () => <div>Loading logos...</div>,
-  }
-);
-
-// ✅ Dynamically import CoverageCard
-const CoverageCard = dynamic(
-  () => import('@/components/CoverageCard'),
-  {
-    loading: () => <div>Loading coverage info...</div>,
-  }
-);
-
+import CoverageCard from "@/components/CoverageCard";
+import LogoSlider from "@/components/LogoSlider";
+import TestimonialSlider from "@/components/TestimonialSlider";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -48,13 +26,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
-
-
-
-
-
-
 
       {/* COVERAGE SECTION */}
       <section className="container px-10 max-[475px]:px-4 mx-auto mt-20">
@@ -91,29 +62,10 @@ export default function Home() {
         </div>
       </section>
 
-
-
-
-
-
-
-
-
-
       {/* LOGO SLIDER */}
       <section className="relative w-full overflow-hidden mt-36">
         <LogoSlider />
       </section>
-
-
-
-
-
-
-
-
-
-
 
       {/* WHY CHOOSE SECTION */}
       <section className="container px-10 max-[475px]:px-4 mx-auto mt-60 max-2xl:mt-44 max-lg:mt-36">
@@ -246,25 +198,28 @@ export default function Home() {
 
       {/*//////////////////// Who It’s For SECTION ///////////////// */}
 
-     <section className="container mx-auto px-10 max-[475px]:px-4 flex items-center flex-col justify-center min-h-[82vh] text-center">
-  <h1 className="font-centra text-black text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight">
-    <span className="text-[#00B0F0]">SEND COI</span> MAKES <br />
-    PAPERWORK DISAPPEAR
-  </h1>
-  <p className="mt-10 text-2xl max-2xl:text-xl max-2xl:mt-7 max-md:text-lg">
-    Smart tools for proof of coverage. No phone calls. No delays.
-  </p>
-  <div className="flex items-center gap-8 mt-10 max-sm:gap-4">
-    <Link href="/" className="btn-primary" aria-label="Get insurance quote">Get Quote</Link>
-    <Link
-      href="/"
-      className="text-lg text-[#00B0F0] font-medium hover:text-[#009ed8] transition max-2xl:text-base max-md:text-[15px]"
-    >
-      Request Your COI Instantly
-    </Link>
-  </div>
-</section>
 
+      <section className="container px-10 max-[475px]:px-4 mx-auto mt-60 max-lg:mt-36">
+        <h2 className="heading centra">Who It’s For</h2>
+        <div className="flex items-center justify-between max-lg:flex-col-reverse">
+          <div className="w-[47%] max-xl:w-[55%] max-lg:w-full max-lg:mt-10 max-md:mt-6 pr-28 max-lg:pr-0 max-2xl:pr-16">
+            <div className="py-8 max-2xl:py-6 border-b border-[rgba(0,0,0,0.2)]">
+              <b className="text-3xl leading-tight max-2xl:text-[25px] max-xl:text-[23px] font-bold max-md:text-xl">Contractors & Vendors</b>
+              <p className="text-xl max-2xl:text-lg text-[rgba(0,0,0,0.5)] font-medium mt-3 max-2xl:mt-1 max-md:text-base">requiring COIs to manage risk before projects</p>
+            </div>
+            <div className="py-8 max-2xl:py-6 border-b border-[rgba(0,0,0,0.2)]">
+              <b className="text-3xl leading-tight max-2xl:text-[25px] max-xl:text-[23px] font-bold max-md:text-xl">Property Managers & Landlords</b>
+              <p className="text-xl max-2xl:text-lg text-[rgba(0,0,0,0.5)] font-medium mt-3 max-2xl:mt-1 max-md:text-base">enforcing COI compliance before entering premises or approving vendors.</p>
+            </div>
+            <div className="py-8 max-2xl:py-6">
+              <b className="text-3xl leading-tight max-2xl:text-[25px] max-xl:text-[23px] font-bold max-md:text-xl">Small Businesses & Sole Proprietors</b>
+              <p className="text-xl max-2xl:text-lg text-[rgba(0,0,0,0.5)] font-medium mt-3 max-2xl:mt-1 max-md:text-base">bidding on jobs or managing client relationships that require</p>
+            </div>
+            <Link href="/" className="inline-block mt-5 btn-primary">Get a Free Quote</Link>
+          </div>
+          <div className="w-[53%] max-xl:w-[45%] max-lg:w-full bg-[url(/images/who_its_for_img.webp)]  max-lg:h-[370px] bg-center max-xl:bg-right bg-cover h-[600px] max-2xl:h-[500px] rounded-xl"></div>
+        </div>
+      </section>
 
 
 
