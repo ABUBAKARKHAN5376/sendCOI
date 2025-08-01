@@ -67,7 +67,7 @@ export default function Navbar() {
                                 {openDropdown === item.id && (
                                     <div className="dropdown-menu absolute mt-2 w-48 bg-white border rounded shadow">
                                         {item.links.map((link) => (
-                                            <a key={link} href="#" className="block px-4 py-2 hover:bg-gray-100">
+                                            <a key={link} href="#" className="block px-4 py-2 rounded hover:bg-gray-100">
                                                 {link}
                                             </a>
                                         ))}
