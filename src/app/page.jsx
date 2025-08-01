@@ -1,8 +1,30 @@
-import CoverageCard from "@/components/CoverageCard";
-import LogoSlider from "@/components/LogoSlider";
-import TestimonialSlider from "@/components/TestimonialSlider";
-import Image from "next/image";
-import Link from "next/link";
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
+
+// ✅ Dynamically import TestimonialSlider
+const TestimonialSlider = dynamic(
+  () => import('@/components/client/TestimonialSlider'),
+  {
+    loading: () => <div>Loading testimonials...</div>,
+  }
+);
+
+// ✅ Dynamically import LogoSlider
+const LogoSlider = dynamic(
+  () => import('@/components/client/LogoSlider'),
+  {
+    loading: () => <div>Loading logos...</div>,
+  }
+);
+
+// ✅ Dynamically import CoverageCard
+const CoverageCard = dynamic(
+  () => import('@/components/CoverageCard'),
+  {
+    loading: () => <div>Loading coverage info...</div>,
+  }
+);
+
 
 export default function Home() {
   return (
@@ -11,7 +33,7 @@ export default function Home() {
 
 
       {/* HERO SECTION */}
-      <section data-aos="fade-in" className="container mx-auto px-10 max-[475px]:px-4 flex items-center flex-col justify-center min-h-[82vh] text-center">
+      <section className="container mx-auto px-10 max-[475px]:px-4 flex items-center flex-col justify-center min-h-[82vh] text-center">
         <h1 className="centra text-black font-centra text-7xl font-black leading-tight max-2xl:text-[55px] max-lg:text-[46px] max-md:text-[40px]  max-sm:text-[36px]">
           <span className="text-[#00B0F0]">SEND COI</span> MAKES <br />
           PAPERWORK DISAPPEAR
@@ -26,6 +48,13 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+
+
+
+
+
+
 
       {/* COVERAGE SECTION */}
       <section className="container px-10 max-[475px]:px-4 mx-auto mt-20">
@@ -62,10 +91,29 @@ export default function Home() {
         </div>
       </section>
 
+
+
+
+
+
+
+
+
+
       {/* LOGO SLIDER */}
       <section className="relative w-full overflow-hidden mt-36">
         <LogoSlider />
       </section>
+
+
+
+
+
+
+
+
+
+
 
       {/* WHY CHOOSE SECTION */}
       <section className="container px-10 max-[475px]:px-4 mx-auto mt-60 max-2xl:mt-44 max-lg:mt-36">
@@ -85,8 +133,6 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                data-aos="fade-right"
-                data-aos-delay={item.delay}
                 className={`py-8 ${index !== 3 ? "border-b border-[#00000033]" : ""} max-2xl:py-6 max-xl:py-5`}
               >
                 <b className="font-medium text-3xl max-2xl:text-[27px] max-xl:text-[24px] max-md:text-[23px] max-sm:text-[21px]">
@@ -158,7 +204,7 @@ export default function Home() {
               <p className="text-lg w-[70%] mt-6 max-2xl:mt-2 max-xl:text-base">Fast account setup. Seamless dashboard access for current policyholders.</p>
             </div>
             <div className="bg-[url(/images/work_img_1.webp)] w-full h-[500px] max-2xl:h-[440px] max-xl:h-[360px] max-sm:h-[240px] rounded-lg bg-center bg-cover flex items-end justify-end p-10 mt-5 max-sm:mt-0">
-              <div data-aos="zoom-in" className="w-28 h-28 rounded-full bg-[#00B0F0] flex items-center justify-center max-2xl:w-20 max-xl:h-15 max-xl:w-15 max-2xl:h-20 pt-4 max-2xl:pt-3">
+              <div className="w-28 h-28 rounded-full bg-[#00B0F0] flex items-center justify-center max-2xl:w-20 max-xl:h-15 max-xl:w-15 max-2xl:h-20 pt-4 max-2xl:pt-3">
                 <p className="font-black text-white text-7xl centra max-2xl:text-5xl max-xl:text-4xl">1</p>
               </div>
             </div>
@@ -167,7 +213,7 @@ export default function Home() {
 
           <div className="w-[32%]  max-lg:w-[47%] max-sm:w-full max-sm:flex max-sm:flex-col">
             <div className="bg-[url(/images/work_img_2.webp)] w-full h-[500px] max-2xl:h-[440px] max-xl:h-[360px]  max-sm:h-[240px] rounded-lg bg-center bg-cover flex items-end justify-end p-10 ">
-              <div data-aos="zoom-in" className="w-28 h-28 rounded-full bg-[#00B0F0] flex items-center justify-center max-2xl:w-20 max-xl:h-15 max-xl:w-15 max-2xl:h-20 pt-4 max-2xl:pt-3">
+              <div className="w-28 h-28 rounded-full bg-[#00B0F0] flex items-center justify-center max-2xl:w-20 max-xl:h-15 max-xl:w-15 max-2xl:h-20 pt-4 max-2xl:pt-3">
                 <p className="font-black text-white text-7xl centra max-2xl:text-5xl max-xl:text-4xl">2</p>
               </div>
             </div>
@@ -184,7 +230,7 @@ export default function Home() {
               <p className="text-lg w-[70%] mt-6 max-2xl:mt-2 max-xl:text-base">Download your PDF or send via secure link. Share directly with stakeholders instantly.</p>
             </div>
             <div className="bg-[url(/images/work_img_3.webp)] w-full h-[500px] max-2xl:h-[440px]  max-xl:h-[360px] max-lg:h-48  max-sm:h-[240px] rounded-lg bg-center bg-cover flex items-end justify-end p-10 mt-5 max-lg:mt-0">
-              <div data-aos="zoom-in" className="w-28 h-28 rounded-full bg-[#00B0F0] flex items-center justify-center max-2xl:w-20 max-xl:h-15 max-xl:w-15 max-2xl:h-20 pt-4 max-2xl:pt-3">
+              <div className="w-28 h-28 rounded-full bg-[#00B0F0] flex items-center justify-center max-2xl:w-20 max-xl:h-15 max-xl:w-15 max-2xl:h-20 pt-4 max-2xl:pt-3">
                 <p className="font-black text-white text-7xl centra max-2xl:text-5xl max-xl:text-4xl">3</p>
               </div>
             </div>
@@ -200,27 +246,24 @@ export default function Home() {
 
       {/*//////////////////// Who It’s For SECTION ///////////////// */}
 
-      <section className="container px-10 max-[475px]:px-4 mx-auto mt-60 max-lg:mt-36">
-        <h2 className="heading centra">Who It’s For</h2>
-        <div className="flex items-center justify-between max-lg:flex-col-reverse">
-          <div className="w-[47%] max-xl:w-[55%] max-lg:w-full  max-lg:mt-10 max-md:mt-6 pr-28 max-2xl:pr-16 max-lg:pr-0">
-            <div data-aos="fade-right" className="py-8 max-2xl:py-6 border-b border-[rgba(0,0,0,0.2)]">
-              <b className="text-3xl leading-tight max-2xl:text-[25px] max-xl:text-[23px] font-bold max-md:text-xl">Contractors & Vendors</b>
-              <p className="text-xl max-2xl:text-lg text-[rgba(0,0,0,0.5)] font-medium mt-3 max-2xl:mt-1 max-md:text-base">requiring COIs to manage risk before projects</p>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="100" className="py-8 max-2xl:py-6 border-b border-[rgba(0,0,0,0.2)]">
-              <b className="text-3xl leading-tight max-2xl:text-[25px] max-xl:text-[23px] font-bold max-md:text-xl">Property Managers & Landlords</b>
-              <p className="text-xl max-2xl:text-lg text-[rgba(0,0,0,0.5)] font-medium mt-3 max-2xl:mt-1 max-md:text-base">enforcing COI compliance before entering premises or approving vendors.</p>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="200" className="py-8 max-2xl:py-6">
-              <b className="text-3xl leading-tight max-2xl:text-[25px] max-xl:text-[23px] font-bold max-md:text-xl">Small Businesses & Sole Proprietors</b>
-              <p className="text-xl max-2xl:text-lg text-[rgba(0,0,0,0.5)] font-medium mt-3 max-2xl:mt-1 max-md:text-base">bidding on jobs or managing client relationships that require</p>
-            </div>
-            <Link data-aos="fade-right" data-aos-delay="300" href="/" className="inline-block mt-5 btn-primary">Get a Free Quote</Link>
-          </div>
-          <div className="w-[53%] max-xl:w-[45%] max-lg:w-full bg-[url(/images/who_its_for_img.webp)]  max-lg:h-[370px] bg-center max-xl:bg-right bg-cover h-[600px] max-2xl:h-[500px] rounded-xl"></div>
-        </div>
-      </section>
+     <section className="container mx-auto px-10 max-[475px]:px-4 flex items-center flex-col justify-center min-h-[82vh] text-center">
+  <h1 className="font-centra text-black text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight">
+    <span className="text-[#00B0F0]">SEND COI</span> MAKES <br />
+    PAPERWORK DISAPPEAR
+  </h1>
+  <p className="mt-10 text-2xl max-2xl:text-xl max-2xl:mt-7 max-md:text-lg">
+    Smart tools for proof of coverage. No phone calls. No delays.
+  </p>
+  <div className="flex items-center gap-8 mt-10 max-sm:gap-4">
+    <Link href="/" className="btn-primary" aria-label="Get insurance quote">Get Quote</Link>
+    <Link
+      href="/"
+      className="text-lg text-[#00B0F0] font-medium hover:text-[#009ed8] transition max-2xl:text-base max-md:text-[15px]"
+    >
+      Request Your COI Instantly
+    </Link>
+  </div>
+</section>
 
 
 
