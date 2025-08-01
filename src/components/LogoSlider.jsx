@@ -9,6 +9,12 @@ const logos = [
   '/images/company_logo_4.svg',
   '/images/company_logo_5.svg',
   '/images/company_logo_6.svg',
+  '/images/company_logo_1.svg',
+  '/images/company_logo_2.svg',
+  '/images/company_logo_3.svg',
+  '/images/company_logo_4.svg',
+  '/images/company_logo_5.svg',
+  '/images/company_logo_6.svg',
 ];
 
 export default function ClientLogoSlider() {
