@@ -228,7 +228,7 @@ export default function Home() {
 
       {/*//////////////////// Don’t lose SECTION ///////////////// */}
 
-      <section className="w-full min-h-[950px] max-lg:min-h-[90vh] bg-[url(/images/clouds_img.webp)] bg-center bg-cover mt-20 max-2xl:mt-0 ">
+      <section className="mx-auto max-w-[2000px] w-full min-h-[950px] max-lg:min-h-[90vh] bg-[url(/images/clouds_img.webp)] bg-center bg-cover mt-20 max-2xl:mt-0 ">
         <div className="container mx-auto px-10 max-[475px]:px-4 min-h-[950px]  flex flex-col justify-center items-center">
           <h2 className="heading centra !mb-0 uppercase">Don’t lose <span className="text-[#00B0F0]">clients</span> or <span className="text-[#00B0F0]">delays</span> <br className=" max-sm:hidden" />
             over missing COIs</h2>
